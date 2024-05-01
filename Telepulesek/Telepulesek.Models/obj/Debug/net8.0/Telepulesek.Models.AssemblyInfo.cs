@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Telepulesek.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fc30374103d002546c5b6a78109948a6f0e7d98")]
 [assembly: System.Reflection.AssemblyProductAttribute("Telepulesek.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Telepulesek.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

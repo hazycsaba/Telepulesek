@@ -10,3 +10,4 @@ C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.Models\obj\Debug\net8.
 C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.Models\obj\Debug\net8.0\refint\Telepulesek.Models.dll
 C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.Models\obj\Debug\net8.0\Telepulesek.Models.pdb
 C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.Models\obj\Debug\net8.0\ref\Telepulesek.Models.dll
+C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.Models\obj\Debug\net8.0\Telepulesek.Models.sourcelink.json

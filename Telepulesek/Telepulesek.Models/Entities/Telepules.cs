@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Telepulesek.Models.Entities;
 
@@ -52,12 +53,13 @@ public partial class Telepules
     [Column(TypeName = "int(11)")]
     public int lakasok { get; set; }
 
+    [JsonIgnore]
     [InverseProperty("hivatal_szekhely")]
-    public virtual ICollection<Telepules> Inversehivatal_szekhely { get; set; } = new List<Telepules>();
+    public virtual ICollection<Telepules>? Inversehivatal_szekhely { get; set; } = new List<Telepules>();
 
     [ForeignKey("hivatal_kod_id")]
     [InverseProperty("telepulesek")]
-    public virtual HivatalKod hivatal_kod { get; set; } = null!;
+    public virtual HivatalKod? hivatal_kod { get; set; } = null!;
 
     [ForeignKey("hivatal_szekhely_id")]
     [InverseProperty("Inversehivatal_szekhely")]
@@ -65,19 +67,21 @@ public partial class Telepules
 
     [ForeignKey("jaras_id")]
     [InverseProperty("telepulesek")]
-    public virtual Jaras jaras { get; set; } = null!;
+    public virtual Jaras? jaras { get; set; } = null!;
 
+    [JsonIgnore]
     [InverseProperty("szekhely")]
-    public virtual ICollection<Jaras> jarasok { get; set; } = new List<Jaras>();
+    public virtual ICollection<Jaras>? jarasok { get; set; } = new List<Jaras>();
 
     [ForeignKey("jogallas_id")]
     [InverseProperty("telepulesek")]
-    public virtual TelepulesJogallas jogallas { get; set; } = null!;
+    public virtual TelepulesJogallas? jogallas { get; set; } = null!;
 
     [ForeignKey("megye_id")]
     [InverseProperty("telepulesek")]
-    public virtual Megye megye { get; set; } = null!;
+    public virtual Megye? megye { get; set; } = null!;
 
+    [JsonIgnore]
     [InverseProperty("szekhely")]
-    public virtual ICollection<Megye> megyek { get; set; } = new List<Megye>();
+    public virtual ICollection<Megye>? megyek { get; set; } = new List<Megye>();
 }

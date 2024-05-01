@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Telepulesek.Models.Entities;
 
@@ -22,6 +23,7 @@ public partial class Megye
     [InverseProperty("megyek")]
     public virtual Telepules? szekhely { get; set; }
 
+    [JsonIgnore]
     [InverseProperty("megye")]
-    public virtual ICollection<Telepules> telepulesek { get; set; } = new List<Telepules>();
+    public virtual ICollection<Telepules>? telepulesek { get; set; } = new List<Telepules>();
 }

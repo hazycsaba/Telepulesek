@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Telepulesek.Models.Entities;
 
@@ -12,7 +13,7 @@ public partial class Jaras
     [StringLength(100)]
     public string kod { get; set; } = null!;
 
-    [StringLength(11)]
+    [StringLength(50)]
     public string jaras { get; set; } = null!;
 
     [Column(TypeName = "int(11)")]
@@ -20,8 +21,9 @@ public partial class Jaras
 
     [ForeignKey("szekhely_id")]
     [InverseProperty("jarasok")]
-    public virtual Telepules szekhely { get; set; } = null!;
+    public virtual Telepules? szekhely { get; set; } = null!;
 
+    [JsonIgnore]
     [InverseProperty("jaras")]
     public virtual ICollection<Telepules> telepulesek { get; set; } = new List<Telepules>();
 }

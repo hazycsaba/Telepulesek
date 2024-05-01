@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Telepulesek.Models.Entities;
 
@@ -13,6 +14,7 @@ public partial class HivatalKod
     [StringLength(100)]
     public string jelentes { get; set; } = null!;
 
+    [JsonIgnore]
     [InverseProperty("hivatal_kod")]
-    public virtual ICollection<Telepules> telepulesek { get; set; } = new List<Telepules>();
+    public virtual ICollection<Telepules>? telepulesek { get; set; } = new List<Telepules>();
 }
