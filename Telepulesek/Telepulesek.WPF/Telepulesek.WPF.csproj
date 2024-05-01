@@ -8,4 +8,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Megyek\" />
+    <Folder Include="Views\Jarasok\" />
+  </ItemGroup>
+
 </Project>

@@ -19,3 +19,7 @@ C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.WPF\obj\Debug\net8.0-w
 C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.WPF\obj\Debug\net8.0-windows\Telepulesek.WPF.pdb
 C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.WPF\obj\Debug\net8.0-windows\Telepulesek.WPF.genruntimeconfig.cache
 C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.WPF\obj\Debug\net8.0-windows\ref\Telepulesek.WPF.dll
+C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.WPF\obj\Debug\net8.0-windows\Views\Telepules\TelepulesListaView.g.cs
+C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.WPF\obj\Debug\net8.0-windows\Views\Telepules\TelepulesReszletekView.g.cs
+C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.WPF\obj\Debug\net8.0-windows\Views\Telepules\TelepulesListaView.baml
+C:\Users\Asus\Desktop\Telepulesek\Telepulesek\Telepulesek.WPF\obj\Debug\net8.0-windows\Views\Telepules\TelepulesReszletekView.baml

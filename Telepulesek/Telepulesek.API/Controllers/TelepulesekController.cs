@@ -19,9 +19,28 @@ namespace Telepulesek.API.Controllers
 
         // GET: api/Telepulesek
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TelepulesListaDTO>>> Gettelepulesek()
+        public async Task<ActionResult<IEnumerable<TableDTO>>> Gettelepulesek(
+            int page = 0, int itemsPerPage = 20,
+            string? search = null,
+            string? sortBy = null, bool ascending = true)
         {
-            var result = await _context.telepulesek.ToListAsync();
+            var query = _context.telepulesek
+                .Include(telepules => telepules.megye)
+                .OrderBy(telepules => telepules.megnevezes)
+                .AsQueryable();
+
+            if(!string.IsNullOrWhiteSpace(search))
+            {
+                int.TryParse(search, out int irsz);
+                query = query.Where(telepules =>
+                telepules.megnevezes.ToLower().Contains(search) ||
+                telepules.telepulesresz.ToLower().Contains(search) ||
+                telepules.IRSZ.Equals(irsz));
+            }
+            if(!string.IsNullOrWhiteSpace(sortBy))
+            {
+
+            }
             return result.ToDTO();
         }
 
